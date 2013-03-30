@@ -18,6 +18,11 @@
 		946E71B01704094000A20C22 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 946E71AF1704094000A20C22 /* Default-568h@2x.png */; };
 		946E71B31704094000A20C22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946E71B21704094000A20C22 /* ViewController.m */; };
 		946E71B61704094000A20C22 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946E71B41704094000A20C22 /* ViewController.xib */; };
+		946E71BE17040A5400A20C22 /* CUAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 946E71BD17040A5400A20C22 /* CUAlertView.m */; };
+		946E71C01707707700A20C22 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946E71BF1707707700A20C22 /* QuartzCore.framework */; };
+		946E71C21707A25800A20C22 /* lilTuffy_splashImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 946E71C11707A25800A20C22 /* lilTuffy_splashImage.jpg */; };
+		94827B641707A65E004CBEB4 /* lilTuffy_theBlackKeys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94827B631707A65E004CBEB4 /* lilTuffy_theBlackKeys.jpg */; };
+		94827B661707A78C004CBEB4 /* lilTuffy_bestCoast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94827B651707A78C004CBEB4 /* lilTuffy_bestCoast.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,12 @@
 		946E71B11704094000A20C22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		946E71B21704094000A20C22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		946E71B51704094000A20C22 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		946E71BC17040A5400A20C22 /* CUAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUAlertView.h; sourceTree = "<group>"; };
+		946E71BD17040A5400A20C22 /* CUAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUAlertView.m; sourceTree = "<group>"; };
+		946E71BF1707707700A20C22 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		946E71C11707A25800A20C22 /* lilTuffy_splashImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lilTuffy_splashImage.jpg; sourceTree = "<group>"; };
+		94827B631707A65E004CBEB4 /* lilTuffy_theBlackKeys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lilTuffy_theBlackKeys.jpg; sourceTree = "<group>"; };
+		94827B651707A78C004CBEB4 /* lilTuffy_bestCoast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lilTuffy_bestCoast.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946E71C01707707700A20C22 /* QuartzCore.framework in Frameworks */,
 				946E719A1704094000A20C22 /* UIKit.framework in Frameworks */,
 				946E719C1704094000A20C22 /* Foundation.framework in Frameworks */,
 				946E719E1704094000A20C22 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +85,7 @@
 		946E71981704094000A20C22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				946E71BF1707707700A20C22 /* QuartzCore.framework */,
 				946E71991704094000A20C22 /* UIKit.framework */,
 				946E719B1704094000A20C22 /* Foundation.framework */,
 				946E719D1704094000A20C22 /* CoreGraphics.framework */,
@@ -83,6 +96,11 @@
 		946E719F1704094000A20C22 /* CUAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				94827B651707A78C004CBEB4 /* lilTuffy_bestCoast.jpg */,
+				94827B631707A65E004CBEB4 /* lilTuffy_theBlackKeys.jpg */,
+				946E71C11707A25800A20C22 /* lilTuffy_splashImage.jpg */,
+				946E71BC17040A5400A20C22 /* CUAlertView.h */,
+				946E71BD17040A5400A20C22 /* CUAlertView.m */,
 				946E71A81704094000A20C22 /* AppDelegate.h */,
 				946E71A91704094000A20C22 /* AppDelegate.m */,
 				946E71B11704094000A20C22 /* ViewController.h */,
@@ -163,6 +181,9 @@
 				946E71AE1704094000A20C22 /* Default@2x.png in Resources */,
 				946E71B01704094000A20C22 /* Default-568h@2x.png in Resources */,
 				946E71B61704094000A20C22 /* ViewController.xib in Resources */,
+				946E71C21707A25800A20C22 /* lilTuffy_splashImage.jpg in Resources */,
+				94827B641707A65E004CBEB4 /* lilTuffy_theBlackKeys.jpg in Resources */,
+				94827B661707A78C004CBEB4 /* lilTuffy_bestCoast.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +197,7 @@
 				946E71A61704094000A20C22 /* main.m in Sources */,
 				946E71AA1704094000A20C22 /* AppDelegate.m in Sources */,
 				946E71B31704094000A20C22 /* ViewController.m in Sources */,
+				946E71BE17040A5400A20C22 /* CUAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +320,7 @@
 				946E71BB1704094000A20C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
