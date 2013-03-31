@@ -50,7 +50,7 @@
     CGFloat labelHeight = [CUAlertView heightForMessage:message
                                      constrainedToWidth:labelWidth];
     
-    CGFloat viewHeight = labelHeight + CUALERTVIEW_MESSAGE_PADDING_TOP + CUALERTVIEW_MESSAGE_PADDING_BOTTOM + CUALERTVIEW_ANIMATION_BOUNCE_DISTANCE;
+    CGFloat viewHeight = labelHeight + CUALERTVIEW_MESSAGE_PADDING_TOP + CUALERTVIEW_MESSAGE_PADDING_BOTTOM + CUALERTVIEW_ANIMATION_BOUNCE_DISTANCE + CUALERTVIEW_CORNER_RADIUS / 2.0f;
     
     self = [super initWithFrame:CGRectMake(0.0, -viewHeight, parentWidth, viewHeight)];
     if (self)
@@ -59,13 +59,43 @@
         [self setDuration:durationInSeconds];
         [self setParentView:parentView];
         
-        CAGradientLayer * gradientBG = [CAGradientLayer layer];
-        gradientBG.frame = [self bounds];
-        gradientBG.colors = @[(id)[[self uicolorFromHexString:CUALERTVIEW_GRADIENT_TOP_COLOR_CODE] CGColor], (id)[[self uicolorFromHexString:CUALERTVIEW_GRADIENT_BOTTOM_COLOR_CODE] CGColor]];
-        [self.layer insertSublayer:gradientBG
-                           atIndex:0];
+        [self setClipsToBounds:YES];
         
-        UILabel * messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(CUALERTVIEW_MESSAGE_PADDING_LEFT, CUALERTVIEW_MESSAGE_PADDING_TOP + CUALERTVIEW_ANIMATION_BOUNCE_DISTANCE, labelWidth, labelHeight)];
+        //  Background
+        
+        if ([CUALERTVIEW_GRADIENT_TOP_COLOR_CODE isEqualToString:CUALERTVIEW_GRADIENT_BOTTOM_COLOR_CODE])
+        {
+            [self setBackgroundColor:[self uicolorFromHexString:CUALERTVIEW_GRADIENT_TOP_COLOR_CODE]];
+        }
+        else
+        {
+            CAGradientLayer * gradientBG = [CAGradientLayer layer];
+            gradientBG.frame = [self bounds];
+            gradientBG.colors = @[(id)[[self uicolorFromHexString:CUALERTVIEW_GRADIENT_TOP_COLOR_CODE] CGColor], (id)[[self uicolorFromHexString:CUALERTVIEW_GRADIENT_BOTTOM_COLOR_CODE] CGColor]];
+            [self.layer insertSublayer:gradientBG
+                               atIndex:0];
+        }
+        
+        // Border
+        
+        if (CUALERTVIEW_BORDER_WIDTH > 0)
+        {
+            CALayer * mainLayer = [self layer];
+            mainLayer.borderWidth = CUALERTVIEW_BORDER_WIDTH;
+            mainLayer.borderColor = [[self uicolorFromHexString:CUALERTVIEW_BORDER_COLOR_CODE] CGColor];
+        }
+        
+        // Corner Radius
+        
+        if (CUALERTVIEW_CORNER_RADIUS > 0)
+        {
+            CALayer * mainLayer = [self layer];
+            mainLayer.cornerRadius = CUALERTVIEW_CORNER_RADIUS;
+        }
+        
+        //  Message
+        
+        UILabel * messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(CUALERTVIEW_MESSAGE_PADDING_LEFT, CUALERTVIEW_MESSAGE_PADDING_TOP + CUALERTVIEW_ANIMATION_BOUNCE_DISTANCE + CUALERTVIEW_CORNER_RADIUS / 2.0f, labelWidth, labelHeight)];
         [messageLabel setNumberOfLines:0];
         [messageLabel setLineBreakMode:CUALERTVIEW_LINE_BREAK_MODE];
         [messageLabel setTextAlignment:CUALERTVIEW_TEXT_ALIGNMENT];
@@ -136,7 +166,7 @@
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^
                      {
-                         alertFrame.origin.y += alertFrame.size.height;
+                         alertFrame.origin.y += alertFrame.size.height - CUALERTVIEW_BORDER_WIDTH - CUALERTVIEW_CORNER_RADIUS;
                          [self setFrame:alertFrame];
                      }
                      completion:^(BOOL finished)

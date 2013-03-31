@@ -21,15 +21,15 @@
 // IMPORTANT!  Don't forget to select the 'Clip Subviews' option on
 //              any view that you will show an alert in.  If you do
 //              forget it shall be immediately apparent to you when
-//              you look at it on yhe simulator/device.
+//              you look at it on the simulator/device.
 
 
-//  The duration of the show/hide slide animations
+//  The duration of the show/hide slide animations.
 //
 #define CUALERTVIEW_ANIMATION_DURATION 0.5
 
 
-//  The default show duration
+//  The default show duration.
 //
 //  Used in:
 //      + (void)showMessage:(NSString *)message;
@@ -39,46 +39,63 @@
 
 //  The animation transitions have a 'bounce' effect.
 //  This defines the distance, and therefore prominence,
-//  of this effect
+//  of this effect.
 //
 #define CUALERTVIEW_ANIMATION_BOUNCE_DISTANCE 8.0f
 
 
-//  The background of the alert view itself
+//  The background of the alert view itself.
 //
-//  Edit these values to match your app's color palate/theme
+//  Edit these values to match your app's color palate/theme.
 //
 //  If you wish for the color to be solid set both
-//  definitions to the same value
+//  definitions to the same value.
 //
 #define CUALERTVIEW_GRADIENT_TOP_COLOR_CODE @"#951717"
 #define CUALERTVIEW_GRADIENT_BOTTOM_COLOR_CODE @"#4B100F"
 
 
-//  The font used in the alert view
+//  The alert view's border properties.
+//
+//  If you do not wish to have a border set the width
+//  to 0.0f and the border will not be created.
+//
+#define CUALERTVIEW_BORDER_WIDTH 1.0f
+#define CUALERTVIEW_BORDER_COLOR_CODE @"ffffff"
+
+
+//  The alert view's corner radius.
+//
+//  If you do not wish to have a corner radius set
+//  this to 0.0f.
+//
+#define CUALERTVIEW_CORNER_RADIUS 4.0f
+
+
+//  The font used in the alert view.
 //
 #define CUALERTVIEW_FONT [UIFont systemFontOfSize:14.0f]
 
 
-//  The HEX code for the color of the message
+//  The HEX code for the color of the message.
 //
 #define CUALERTVIEW_TEXT_COLOR_CODE @"#ffffff"
 
 
 //  The line break mode to use for the UILabel displaying
-//  the given message
+//  the given message.
 //
 #define CUALERTVIEW_LINE_BREAK_MODE NSLineBreakByWordWrapping
 
 
 //  The text alignment to use for the UILabel displaying
-//  the given message
+//  the given message.
 //
 #define CUALERTVIEW_TEXT_ALIGNMENT NSTextAlignmentCenter
 
 
 //  The padding values for the UILabel that displays
-//  the given message
+//  the given message.
 //
 #define CUALERTVIEW_MESSAGE_PADDING_TOP 4.0f
 #define CUALERTVIEW_MESSAGE_PADDING_RIGHT 2.0f

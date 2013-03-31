@@ -45,7 +45,8 @@
 {
     [super viewDidLoad];
 	
-    [CUAlertView showMessage:@"Welcome Back!"
+    [CUAlertView showMessage:@"Welcome Back!  This is a long message with a long pause."
+                 forDuration:4.0f
                       inView:[self view]];
     
     imageMessages_ = @[ @"Lil Tuffy, Graphic Designer", @"The Black Keys", @"Best Coast" ]; // Tags set in IB to match to this array.
