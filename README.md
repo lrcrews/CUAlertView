@@ -23,7 +23,7 @@ Well,
 
 1. Add the CUAlertView.h/.m to your project
 2. Find a place where you want one of these alert views
-    2.1. Set 'Clip Subviews' to YES on the view (parent) that will display the alert
+    1. Set 'Clip Subviews' to YES on the view (parent) that will display the alert
 3. Call the method
 
 What method you ask?  Either…
